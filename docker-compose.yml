@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  main-db:
+    image: postgres:latest
+    ports:
+      - 5433:5433
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=Bekasyl123@
+      - POSTGRES_DB=tic_tak_toe_online
+    volumes:
+      - main-db:/var/lib/postgresql/data
+
+volumes:
+  main-db:
